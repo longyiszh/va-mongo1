@@ -1,0 +1,15 @@
+{
+  "name": "va-mongo1",
+  "version": "0.1.0",
+  "description": "va learning mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Valorad",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.2.0",
+    "mongoose": "^4.8.1"
+  }
+}
