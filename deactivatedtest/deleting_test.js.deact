@@ -1,0 +1,28 @@
+const assert = require('assert');
+const SDK = require('../models/SDK');
+
+
+// ------------------------------------------------------------------------ //
+//   Create a new SDK in Mongo Shell yourself before running this test.     //
+// ------------------------------------------------------------------------ //
+
+// saving a new SDK. Run the followings in mongo shell:
+// use CDK
+// let FO4 = {name: "Fallout4",price: "￥199", platform: "Steam", receiver: "Billy", steveAttitude:"Impressed" };
+// let AC4 = {name: "Assassin Creed IV",price: "￥299", platform: "Uplay", receiver: "Xiaomajia", steveAttitude:"Damned" };
+// q = db.getCollection('sdks');
+// q.save(FO4);
+// q.save(AC4);
+
+// Describe test group
+describe('Deleting tests', () => {
+    // create test 1 - find sdk test
+    it('Delete a SDK called AC4', (done) => {
+        SDK.findOneAndRemove({name: 'AC4'}).then(()=>{
+            SDK.findOne({name: 'AC4'}).then((result)=>{
+                assert(result === null);
+                done();
+            });
+        });
+    });
+});

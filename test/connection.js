@@ -27,12 +27,12 @@ before((done) => {
     //因为使用了Async方法，所以要手动指定何时完成。done()表示测试完成。
 });
 
-beforeEach((done)=>{
-    //Drop the Collection
-    mongoose.connection.collections.sdks.drop(()=>{
-        done();
-    });
-    // drop是一个Async方法。
-    //因为使用了Async方法，所以要手动指定何时完成。done()表示测试完成。
-});
+// beforeEach((done)=>{
+//     //Drop the Collection
+//     mongoose.connection.collections.sdks.drop(()=>{
+//         done();
+//     });
+//     // drop是一个Async方法。
+//     //因为使用了Async方法，所以要手动指定何时完成。done()表示测试完成。
+// });
 
